@@ -1,5 +1,5 @@
 <?php
-
+// enter your friends' names and emails here
 $contacts = array(
     'name' => 'theiremail@domain.tld', 
     'name1' => 'theiremail@domain.tld',
@@ -15,6 +15,9 @@ $contacts = array(
     'name10' => 'theiremail@domain.tld'
 );
 
+// groups are currently symmetrical. anyone in a group will NOT get anyone else in that group
+// a person may appear in multiple groups
+// so this is where you might indicate what people should not be assigned to each other
 $groups = array(
     array('name', 'name1'),
     array('name2', 'name3'),
@@ -22,6 +25,11 @@ $groups = array(
     array('name6', 'name7', 'name8', 'name9'),
     array('name0', 'name10')
 );
+
+
+// // // // // // // // // // // // // // // // // // // // // // // // 
+// should not have to edit past this point
+// // // // // // // // // // // // // // // // // // // // // // // // 
 
 function pairOK($santa, $receiver, $groups) {
     foreach ($groups as $group) {
